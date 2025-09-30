@@ -28,6 +28,19 @@ int Sum = Number_One + Number_Two;
 
 Console.WriteLine("The sum of two numbers is: " + Sum);
 
+#!csharp
+
+using System;   
+// add two numbers in C#
+
+int Number_One = 10;
+int Number_Two = 20;
+int Number_Three = 30;
+
+int Sum = Number_One / Number_Two; 
+
+Console.WriteLine("The sum of two numbers is: " + Sum);
+
 #!markdown
 
 `+` with strings <br> 
@@ -40,10 +53,11 @@ Console.WriteLine("The sum of two numbers is: " + Sum);
 
 string Text_One = "Hello "; // note the space at the end of the string
 string Text_Two = "World";
+string Text_Three = "Wonderful ";
 
-string Text_Three = Text_One + Text_Two;
+string Text_Four = Text_One + Text_Three + Text_Two;
 
-Console.WriteLine("My message is: " + Text_Three);
+Console.WriteLine("My message is: " + Text_Four);
 
 #!markdown
 
@@ -54,7 +68,7 @@ The Modulus operator `%` returns the remainder after a division. E.g. 10 divided
 
 // modulus operator in C#
 
-int Number = 10;
+int Number = 9;
 int Divisor = 3;
 
 int Remainder = Number % Divisor; // modulus operator % returns the remainder of dividing two integers
@@ -71,8 +85,8 @@ Change the numbers in the following examples to make sure you understand the cod
 
 // Add and assign
 
-int Number = 10;
-int Increment = 5;
+int Number = 12;
+int Increment = 51;
 Number += Increment; // Number = Number + Increment = 15
 
 Console.WriteLine("The new value of Number is: " + Number);
@@ -81,8 +95,8 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 // Subtract and assign
 
-int Number = 10;
-int Decrement = 5;
+int Number = 73;
+int Decrement = 15;
 Number -= Decrement; // Number = Number + Increment = 15
 
 Console.WriteLine("The new value of Number is: " + Number);
@@ -91,8 +105,8 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 // Multiply and assign
 
-int Number = 10;   
-int Multiplier = 5;
+int Number = 4;   
+int Multiplier = 3;
 
 Number *= Multiplier; // Number = Number * Multiplier = 50
 
@@ -102,8 +116,8 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 // Divide and assign
 
-int Number = 10;
-int Divisor = 5;
+int Number = 63;
+int Divisor = 21;
 
 Number /= Divisor; // Number = Number / Divisor = 2
 
@@ -113,8 +127,8 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 // Modulus and assign
 
-int Number = 10;
-int Divisor = 3;
+int Number = 109;
+int Divisor = 5;
 
 Number %= Divisor; // Number = Number % Divisor = 1
 
@@ -125,7 +139,7 @@ Console.WriteLine("The new value of Number is: " + Number);
 // Example of modulus operator to check if a number is even or odd
 // This can be used in timers - e.g. a counter continually increments and is modulus divided by 100 to check if a second has passed (no remainder at 100, 200, 300, etc.)
 
-int Number = 10;
+int Number = 216;
 
 if (Number % 2 == 0) // if the remainder of dividing Number by 2 is 0, then Number is even
 {
@@ -146,8 +160,8 @@ Change the number below and check the output
 // less than operator <, greater than operator >, less than or equal to operator <=, 
 // greater than or equal to operator >=, equal to operator ==, not equal to operator !=
 
-int Number_One = 10;
-int Number_Two = 20;
+int Number_One = 40;
+int Number_Two = 36;
 
 if (Number_One > Number_Two)
 {
