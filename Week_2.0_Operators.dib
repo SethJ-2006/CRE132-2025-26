@@ -176,6 +176,23 @@ else if (Number_One == Number_Two)
     Console.WriteLine(Number_One + " is equal to " + Number_Two);
 }
 
+#!csharp
+
+//less than operator <, greater than operator >, less than or equal to operator <=,
+//greater than or equal to operator >=, equal to operator ==, not equal to operator !=
+
+int Number_One = 44;
+int Number_Two = 44;
+
+if (Number_One == Number_Two)
+{
+    Console.WriteLine(Number_One + " is equal to " + Number_Two);
+}
+else if (Number_One != Number_Two)
+{
+    Console.WriteLine(Number_One + " is not equal to " + Number_Two);
+}
+
 #!markdown
 
 ### Logical Operators
