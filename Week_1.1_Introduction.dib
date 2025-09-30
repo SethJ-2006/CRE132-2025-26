@@ -361,8 +361,8 @@ using Raylib_cs;
 using static Raylib_cs.Raylib;
 
 // Initialize the window
-const int screenWidth = 800;
-const int screenHeight = 600;
+const int screenWidth = 1600;
+const int screenHeight = 1200;
 InitWindow(screenWidth, screenHeight, "Raylib [C#] - Drawing Shapes Example");
 
 // Set the target FPS
@@ -374,20 +374,28 @@ while (!WindowShouldClose())
     ClearBackground(Color.White); // Clear the background to white
 
     // Draw rectangles - xpos, ypos, width, height
-    DrawRectangle(100, 100, 200, 150, Color.Red);
-    DrawRectangleLines(100, 100, 200, 150, Color.Black);
+    DrawRectangle(400, 400, 500, 400, Color.Red);
+    DrawRectangleLines(400, 400, 500, 400, Color.Black);
     
     // Draw circles - xpos, ypos, radius
-    DrawCircle(400, 225, 50, Color.Blue);
-    DrawCircleLines(400, 225, 50, Color.Black);
+    DrawCircle(400, 550, 133, Color.Blue);
+    DrawCircleLines(400, 550, 133, Color.Black);
+
+    //Draw another circle - xpos, ypos, radius
+    DrawCircle(400, 550, 67, Color.Black);
+    DrawCircleLines(400, 550, 67, Color.Black);
     
     // Draw more shapes - xpos, ypos, width, height
-    DrawRectangle(500, 200, 100, 100, Color.Green);
-    DrawRectangleLines(500, 200, 100, 100, Color.Black);
+    DrawRectangle(550, 500, 200, 400, Color.Green);
+    DrawRectangleLines(550, 500, 200, 400, Color.Black);
 
     // Draw more shapes - xpos, ypos, radius
-    DrawCircle(650, 300, 75, Color.Yellow);
-    DrawCircleLines(650, 300, 75, Color.Black);
+    DrawCircle(900, 550, 133, Color.Yellow);
+    DrawCircleLines(900, 550, 133, Color.Black);
+
+    // Draw more shapes - xpos, ypos, radius
+    DrawCircle(900, 550, 67, Color.Black);
+    DrawCircleLines(900, 550, 67, Color.Black);
 
     EndDrawing();
 }
