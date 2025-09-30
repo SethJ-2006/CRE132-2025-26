@@ -251,7 +251,7 @@ using Raylib_cs;
 const int screenWidth = 800;
 const int screenHeight = 600;
 const int positionX = 120;
-const int positionY = 200;
+const int positionY = 250;
 const int fontSize = 50;
 
 // Initialization
