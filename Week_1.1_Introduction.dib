@@ -163,6 +163,20 @@ Console.WriteLine("Level: " + characterLevel);
 Console.WriteLine("Attack Power: " + attackPower);
 Console.WriteLine("Is Friendly?: " + isFriendly);
 
+#!csharp
+
+// Create your character's variables here
+string characterName = "Merlin";
+int characterLevel = 79;
+float attackPower = 70.4f;
+bool isFriendly = true;
+
+// Print your character's information here
+Console.WriteLine("Character Name: " + characterName);
+Console.WriteLine("Lvl: " + characterLevel);
+Console.WriteLine("Attack Pwr: " + attackPower);
+Console.WriteLine("Is Friendly?: " + isFriendly);
+
 #!markdown
 
 Note how text can be added together using the ```+``` symbol. Though the ```+``` operator normally adds numbers, there are some contexts where is is *overidden* to add other objects or quantities togther.
@@ -172,20 +186,6 @@ Note how text can be added together using the ```+``` symbol. Though the ```+```
 ## 7. Code Challenge: Create Your Own Character
 
 **Your Challenge:** In the code cell below, create a set of variables to describe a game character of your own invention. You must use at least one `string`, one `int`, one `float`, and one `bool`. Give them creative names and values, and then print them out to the console.
-
-#!csharp
-
-// Create your character's variables here
-string characterName = "Seth";
-int characterLevel = 18;
-float attackPower = 55.4f;
-bool isFriendly = true;
-
-// Print your character's information here
-Console.WriteLine("Character Name: " + characterName);
-Console.WriteLine("Lvl: " + characterLevel);
-Console.WriteLine("Attack Pwr: " + attackPower);
-Console.WriteLine("Is Friendly?: " + isFriendly);
 
 #!markdown
 
