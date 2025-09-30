@@ -46,6 +46,24 @@ if (playerScore >= 100)
     Console.WriteLine("You are a high-score champion!");
 }
 
+#!csharp
+
+int playerHealth = 70;
+
+if (playerHealth < 100)
+{
+    Console.WriteLine("You have taken damage! Health reduced to " + playerHealth);
+}
+
+#!csharp
+
+int playerAmmo = 32;
+
+if (playerAmmo == 32)
+{
+    Console.WriteLine("Your ammo capacity is already full.");
+}
+
 #!markdown
 
 ## 3. Handling the "Otherwise" with `else`
@@ -76,6 +94,19 @@ else
     Console.WriteLine("Your health is low. Find a health pack!");
 }
 
+#!csharp
+
+int playerLives = 10;
+
+if (playerLives < 1)
+{
+    Console.WriteLine("Game Over!");
+}
+else
+{
+    Console.WriteLine("You have lost one life.");
+}
+
 #!markdown
 
 ## 4. Chaining Conditions with `else if`
@@ -103,6 +134,27 @@ else
     Console.WriteLine("Weather condition unknown.");
 }
 
+#!csharp
+
+string weather = "Overcast";
+
+if (weather == "Rainy")
+{
+    Console.WriteLine("Better get your raincoat!");
+}
+else if (weather == "Sunny")
+{
+    Console.WriteLine("Looks like a perfect beach day!");
+}
+else if (weather == "Snowy")
+{
+    Console.WriteLine("Might want to stay warm.");
+}
+else if (weather == "Overcast")
+{
+    Console.WriteLine("Pretty cloudy, but it's not so bad.");
+}
+
 #!markdown
 
 ## 5. Code Challenge: Simple Password Checker
@@ -117,6 +169,18 @@ else
 #!csharp
 
 // Your password checker code goes here!
+
+string password = "iaeohdxvoprpg5";
+
+Console.WriteLine("Please enter your password");
+if (password == "iaeohdxvoprpgu")
+{
+    Console.WriteLine("Welcome, Username!");
+}
+else if (password != "iaeohdxvoprpgu")
+{
+    Console.WriteLine("This password is incorrect, please try again. (Remaining attempts: 3)");
+}
 
 #!markdown
 
