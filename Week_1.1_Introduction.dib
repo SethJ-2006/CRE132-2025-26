@@ -250,6 +250,9 @@ using Raylib_cs;
 // Window dimensions
 const int screenWidth = 800;
 const int screenHeight = 600;
+const int positionX = 120;
+const int positionY = 200;
+const int fontSize = 50;
 
 // Initialization
 Raylib.InitWindow(screenWidth, screenHeight, "My First Game Window");
@@ -261,9 +264,9 @@ while (!Raylib.WindowShouldClose()) // Detect window close button or ESC key
     // Drawing
     Raylib.BeginDrawing();
 
-    Raylib.ClearBackground(Color.White); // Clear the background to a light grey
+    Raylib.ClearBackground(Color.Black); // Clear the background to a light grey
 
-    Raylib.DrawText("My First Raylib Window!", 190, 200, 20, Color.Black);
+    Raylib.DrawText("My First Raylib Window!", positionX, positionY, fontSize, Color.Yellow);
 
     Raylib.EndDrawing();
 }
