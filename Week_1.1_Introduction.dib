@@ -361,8 +361,8 @@ using Raylib_cs;
 using static Raylib_cs.Raylib;
 
 // Initialize the window
-const int screenWidth = 1600;
-const int screenHeight = 1200;
+const int screenWidth = 1300;
+const int screenHeight = 1300;
 InitWindow(screenWidth, screenHeight, "Raylib [C#] - Drawing Shapes Example");
 
 // Set the target FPS
