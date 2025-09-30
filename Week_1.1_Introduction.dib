@@ -187,6 +187,13 @@ Note how text can be added together using the ```+``` symbol. Though the ```+```
 
 **Your Challenge:** In the code cell below, create a set of variables to describe a game character of your own invention. You must use at least one `string`, one `int`, one `float`, and one `bool`. Give them creative names and values, and then print them out to the console.
 
+#!csharp
+
+// Creat your character's variables here
+
+
+// Print your character's information here
+
 #!markdown
 
 ## 8. Variables Summary
