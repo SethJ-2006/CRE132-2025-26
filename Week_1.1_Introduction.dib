@@ -172,9 +172,16 @@ Note how text can be added together using the ```+``` symbol. Though the ```+```
 #!csharp
 
 // Create your character's variables here
-
+string characterName = "Seth";
+int characterLevel = 18;
+float attackPower = 55.4f;
+bool isFriendly = true;
 
 // Print your character's information here
+Console.WriteLine("Character Name: " + characterName);
+Console.WriteLine("Lvl: " + characterLevel);
+Console.WriteLine("Attack Pwr: " + attackPower);
+Console.WriteLine("Is Friendly?: " + isFriendly);
 
 #!markdown
 
