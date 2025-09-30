@@ -233,6 +233,30 @@ string message = name   + " is " + age + " years old. He has an average mark of 
 // displaying the message
 Console.WriteLine(message);
 
+#!csharp
+
+using System;
+
+string name = "Seth";          // text data type
+int age = 18;                    // integer data type
+float averageMark = 66.67f;     // floating-point data type
+char averageGrade = 'A';        // single character data type
+bool coursePassed = true;       // boolean (logical) data type
+
+// ! add pass or fail logic here to set the coursePassed variable !
+
+// some code to determine if the course was passed or failed
+string result = "";
+if (coursePassed == true) { result = "Passed"; }
+else { result = "Failed"; }
+
+// building the message to be displayed
+string message = name   + " is " + age + " years old. He has an average mark of " 
+                        + (int)averageMark + " which gives him a grade = " + averageGrade 
+                        + ". This means he has " + result + " the course."; 
+// displaying the message
+Console.WriteLine(message);
+
 #!markdown
 
 A few things to note about the code above.
