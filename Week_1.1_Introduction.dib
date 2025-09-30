@@ -94,6 +94,10 @@ Change the text inside the `Console.WriteLine()` command. Make it print your nam
 
 Console.WriteLine("Hello, World!");
 
+#!csharp
+
+Console.WriteLine("The Fitness Gram Pacer Test is a multistage aerobic test...");
+
 #!markdown
 
 ## 4. What is a Variable?
