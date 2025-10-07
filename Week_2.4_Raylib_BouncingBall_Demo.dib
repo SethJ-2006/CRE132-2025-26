@@ -196,7 +196,7 @@ static void DrawEnemies(float[] enemyX, float[] enemyY)
 {
     for (int i = 0; i < enemyX.Length; i++)
     {
-        Raylib.DrawCircle((int)enemyX[i], (int)enemyY[i], 15, Color.RED);
+        Raylib.DrawCircle((int)enemyX[i], (int)enemyY[i], 15, Color.Red);
     }
 }
 
@@ -218,10 +218,10 @@ while (!Raylib.WindowShouldClose())
     Raylib.ClearBackground(Color.DarkGreen);
     
     // Use our flexible methods
-    DrawPlayer(playerX, playerY, Color.BLUE);
+    DrawPlayer(playerX, playerY, Color.Blue);
     DrawEnemies(enemyX, enemyY);
     
-    Raylib.DrawText("Left/Right arrows to move", 10, 10, 20, Color.WHITE);
+    Raylib.DrawText("Left/Right arrows to move", 10, 10, 20, Color.White);
     
     Raylib.EndDrawing();
 }
@@ -237,6 +237,83 @@ Raylib.CloseWindow();
 Let's also apply this organisation to our text-based games. Here's a simple adventure game that's properly organised:
 
 **Note**: Since `Console.ReadLine()` doesn't work in polyglot cells, we'll use a predefined array of actions to simulate player input.
+
+#!csharp
+
+using System;
+
+// Set your actions here (change these to test different scenarios)
+string[] playerActions = { "explore", "fight", "rest", "explore", "fight" };
+
+static int playerHealth = 100;
+static int playerScore = 0;
+
+static void DisplayGameStatus()
+{
+    Console.WriteLine($"Health: {playerHealth} | Score: {playerScore}");
+    Console.WriteLine("=====================================");
+}
+
+static void ProcessPlayerAction(string action)
+{
+    switch (action.ToLower())
+    {
+        case "explore":
+            Console.WriteLine("You venture deeper into the forest...");
+            playerScore += 10;
+            break;
+        case "rest":
+            Console.WriteLine("You rest and regain some health.");
+            playerHealth += 20;
+            if (playerHealth > 100) playerHealth = 100;
+            break;
+        case "fight":
+            Console.WriteLine("You battle a wild creature!");
+            playerHealth -= 30;
+            playerScore += 25;
+            break;
+        default:
+            Console.WriteLine("You don't understand that command.");
+            break;
+    }
+}
+
+static bool IsGameOver()
+{
+    return playerHealth <= 0;
+}
+
+// Clean game loop using our organised methods
+Console.WriteLine("=== Forest Adventure ===");
+
+int actionIndex = 0;
+while (!IsGameOver() && actionIndex < playerActions.Length)
+{
+    DisplayGameStatus();
+    Console.WriteLine("What do you want to do?");
+    Console.WriteLine("Commands: explore, rest, fight, quit");
+    
+    string input = playerActions[actionIndex];
+    Console.WriteLine($"Action chosen: {input}");
+    
+    if (input.ToLower() == "quit")
+        break;
+        
+    ProcessPlayerAction(input);
+    actionIndex++;
+    Console.WriteLine();
+}
+
+if (IsGameOver())
+{
+    Console.WriteLine("Game Over! You were defeated.");
+}
+else if (actionIndex >= playerActions.Length)
+{
+    Console.WriteLine("Adventure completed!");
+}
+
+Console.WriteLine($"Final Score: {playerScore}");
 
 #!csharp
 
@@ -376,6 +453,10 @@ while (!Raylib.WindowShouldClose() && gameRunning)
 if (score >= 10) Console.WriteLine("You win! Great job!");
 
 Raylib.CloseWindow();
+
+#!csharp
+
+using Raylib_cs;
 
 #!markdown
 
