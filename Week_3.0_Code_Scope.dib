@@ -1,6 +1,6 @@
 #!meta
 
-{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"name":"csharp"},{"name":"fsharp","languageName":"F#","aliases":["f#","fs"]},{"name":"html","languageName":"HTML"},{"name":"http","languageName":"HTTP"},{"name":"javascript","languageName":"JavaScript","aliases":["js"]},{"name":"mermaid","languageName":"Mermaid"},{"name":"pwsh","languageName":"PowerShell","aliases":["powershell"]},{"name":"value"}]}}
 
 #!markdown
 
@@ -23,11 +23,11 @@ Console.WriteLine("Start Global x = " + x); // 5
         for (int i = 0; i < 1; i++) // loop once
         {
             // This is a nested block scope
-            int x = 20; 
-            // code in the nested block scope can see the outer block scope - so we can't define x twice. 
+            int y = 20; 
+            // code in the nested block scope can see the outer block scope - so we can't define y twice. 
             // delete the int keyword and run.
-            // next comment out the int x = 20; line and run.
-            Console.WriteLine("    Nested Local Block x = " + x); // 20
+            // next comment out the int y = 20; line and run.
+            Console.WriteLine("    Nested Local Block x = " + y); // 20
         }
         Console.WriteLine("  End Local Block x = " + x);
     }
@@ -66,7 +66,7 @@ class ScopeDemo
         }
 
         // Trying to access blockVariable here will result in a compile-time error as blockVariable was declared within the scope of the if block
-        Console.WriteLine(blockVariable); // Commenting this line will fix the error
+        Console.WriteLine(localVariable); // Commenting this line will fix the error
     }
 }
         
@@ -77,17 +77,17 @@ class ScopeDemo
 ScopeDemo sd1 = new ScopeDemo();
 ScopeDemo sd2 = new ScopeDemo();
 
-Console.WriteLine("sd1 Private Variable: " + sd1.classInternalVariable);    // Can't access private variable of class instance. Comment this line to fix the error
+Console.WriteLine("sd1 Public Variable: " + sd1.classInternalVariable);    // Can't access private variable of class instance. Comment this line to fix the error
 Console.WriteLine("sd1 Public Variable: " + sd1.classExternalVariable);     // Can access public variable of class instance.
-Console.WriteLine("Block Variable: " + sd1.blockVariable);                  // Can't access blockVariable as it is not a class variable. Comment this line to fix the error
+Console.WriteLine("sd1.Block Variable: " + sd1.blockVariable);                  // Can't access blockVariable as it is not a class variable. Comment this line to fix the error
 
 ScopeDemo.classStaticVariable = 100;   // Changing the value of a static variable in one instance will change it for all instances
 Console.WriteLine("A static variable can be accessed directly using the class name - classStaticVariable = " + ScopeDemo.classStaticVariable);    // Can access static variable without creating an instance of the class.
 
 class ScopeDemo
 {
-    // Private class scope (also called field or member variable)
-    private int classInternalVariable = 10;
+    // Public class scope (also called field or member variable)
+    public int classInternalVariable = 10;
     // Public class scope - accessible to other classes
     public int classExternalVariable = 20;
     // Static class scope - accessible without creating an instance of the class
