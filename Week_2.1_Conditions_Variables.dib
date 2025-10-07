@@ -332,6 +332,13 @@ int aRealInt = int.Parse(someNumberAsString);
 
 Console.WriteLine(aRealInt * 2); // This now works!
 
+#!csharp
+
+string someNumberAsString = "4";
+int aRealInt = int.Parse(someNumberAsString);
+
+Console.WriteLine(aRealInt / 2);
+
 #!markdown
 
 **Important:** If the string contains anything that isn't a number (like `"hello"` or `"50a"`), `int.Parse()` will crash your program! For now, we will assume the user always enters a valid number.
