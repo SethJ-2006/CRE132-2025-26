@@ -187,6 +187,15 @@ for (int y = 0; y < size; y++)
 #!csharp
 
 // Your triangle-drawing code goes here!
+int size = 5;
+for (int y = 0; y < size; y++)
+{
+    for (int x = 1; x < size; y++)
+    {
+        Console.Write("#"); //Write a character
+    }
+    Console.Writeline();
+}
 
 #!markdown
 
