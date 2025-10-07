@@ -273,6 +273,30 @@ A few things to note about the code above.
 
 #!markdown
 
+using System;
+
+string name = "Derek";          // text data type
+int age = 18;                    // integer data type
+float averageMark = 48.7f;     // floating-point data type
+char averageGrade = 'B';        // single character data type
+
+// ! add pass or fail logic here to set the coursePassed variable !
+string result = ""
+if (int)averageMark >= 50; {coursePassed = "passed"};
+else {coursePassed = "failed"};
+
+// some code to determine if the course was passed or failed
+
+
+// building the message to be displayed
+string message = name   + " is " + age + " years old. He has an average mark of " 
+                        + (int)averageMark + " which gives him a grade = " + averageGrade 
+                        + ". This means he has " + coursePassed + " the course."; 
+// displaying the message
+Console.WriteLine(message);
+
+#!markdown
+
 ## 7. Text Game with Logic
 
 ### Applying Logic to a Game
