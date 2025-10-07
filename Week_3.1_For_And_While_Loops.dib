@@ -97,6 +97,11 @@ The program should print:
 
 // Your loop to print the song lyrics goes here!
 
+for (int i = 99; i > 0; i--)
+{
+    Console.WriteLine(i + " bottles of pop on the wall!");
+}
+
 #!markdown
 
 ## 5. Summary
