@@ -458,6 +458,15 @@ Raylib.CloseWindow();
 
 using Raylib_cs;
 
+Raylib.InitWindow(1600, 1200, "Messy Star Game - Cleaned & Polished!");
+
+float playerX = 500, playerY = 350;
+float starX = 250, starY = 125;
+int score = 0;
+bool gameRunning = true;
+
+while (!Raylib.WindowShouldClose() &&)
+
 #!markdown
 
 ### Your Task:
