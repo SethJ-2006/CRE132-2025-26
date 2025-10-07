@@ -287,3 +287,22 @@ This is a challenging task, but it's a perfect preview of the kinds of things we
 #!csharp
 
 // Your rain effect code goes here!
+using Raylib.cs;
+
+const int screenWidth = 800;
+const int screenHeight = 600;
+
+int randomX = new Random().Next(0, screenWidth);
+
+Raylib.InitWindow(screenWidth, screenHeight, "Falling Rain");
+Raylib.SetTargetFPS(60);
+
+int spacing = 20;
+
+while (!Raylib.WindowShouldClose())
+{
+    Raylib.BeginDrawing();
+    Raylib.ClearBackground(Color.DarkGray);
+
+    for (int y = 0; y <)
+}
