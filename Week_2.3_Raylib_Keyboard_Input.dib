@@ -211,6 +211,114 @@ For example, for the right-side boundary, you would only move the player if the 
 #!csharp
 
 // Your improved movement code goes here!
+using static Raylib_cs.Raylib;
+using Raylib_cs;
+using System.Numerics;
+
+// Window Code Cell
+const int screenWidth = 1200;
+const int screenLength = 1200;
+InitWindow(screenWidth, screenLength, "Raylib [C#] - Code Challenge");
+
+SetTargetFPS(60);
+
+// Defining shape properties
+Vector2 circlePosition = new Vector2(screenWidth / 3, screenHeight / 3);
+int circleCenter = 300;
+float circleRadius = 99.9f;
+float speed = 5.0f;
+
+// Main game loop
+while (!WindowShouldClose()) // Detect Window Close Button or ESC key
+{
+    // Update shape position
+    circlePosition = UpdateCirclePosition(circlePosition, speed, circleCenter, screenWidth, screenHeight);
+
+    BeginDrawing();
+    ClearBackground(Color.White);
+    DrawCircle((int) circleCenter, (float) circleRadius, Color.Yellow);
+    EndDrawing();
+}
+
+// Close the window and OpenGL context
+CloseWindow();
+
+// Function to update the circle's position
+Vector2 UpdateCirclePosition(Vector2 circlePosition, float speed, int centerX, int screenWidth, int screenHeight)
+{
+    // Update position based on cursor arrows
+    if (IsKeyDown(KeyboardKey.Right)) centerX += speed;
+    if (IsKeyDown(KeyboardKey.Left)) centerX -= speed;
+    if (IsKeyDown(KeyboardKey.Up)) centerY += speed;
+    if (IsKeyDown(KeyboardKey.Down)) centerY -= speed;
+
+    //Prevent the user from leaving the boundaries
+    if (position.X < 0) position.X = 0;
+    if (position.Y < 0) position.Y = 0;
+    if (position.X > screenWidth - centerX) position.X = screenWidth - centerX;
+    if (position.Y > screenHeight - circleCenter.Y) position.Y = screenHeight - circleCenter.Y;
+
+    return position;
+}
+
+#!csharp
+
+        // Initialization
+        //--------------------------------------------------------------------------------------
+        const int screenWidth = 800;
+        const int screenHeight = 450;
+
+        InitWindow(screenWidth, screenHeight, "raylib [shapes] example - basic shapes drawing");
+
+        SetTargetFPS(60);
+        //--------------------------------------------------------------------------------------
+
+        // Main game loop
+        while (!WindowShouldClose())
+        {
+            // Update
+            //----------------------------------------------------------------------------------
+            // TODO: Update your variables here
+            //----------------------------------------------------------------------------------
+
+            // Draw
+            //----------------------------------------------------------------------------------
+            BeginDrawing();
+            ClearBackground(Color.RayWhite);
+
+            DrawText("some basic shapes available on raylib", 20, 20, 20, Color.DarkGray);
+
+            DrawLine(18, 42, screenWidth - 18, 42, Color.Black);
+
+            DrawCircle(screenWidth / 4, 120, 35, Color.DarkBlue);
+            DrawCircleGradient(screenWidth / 4, 220, 60, Color.Green, Color.SkyBlue);
+            DrawCircleLines(screenWidth / 4, 340, 80, Color.DarkBlue);
+
+            DrawRectangle(screenWidth / 4 * 2 - 60, 100, 120, 60, Color.Red);
+            DrawRectangleGradientH(screenWidth / 4 * 2 - 90, 170, 180, 130, Color.Maroon, Color.Gold);
+            DrawRectangleLines(screenWidth / 4 * 2 - 40, 320, 80, 60, Color.Orange);
+
+            DrawTriangle(
+                new Vector2(screenWidth / 4 * 3, 80),
+                new Vector2(screenWidth / 4 * 3 - 60, 150),
+                new Vector2(screenWidth / 4 * 3 + 60, 150), Color.Violet
+            );
+
+            DrawTriangleLines(
+                new Vector2(screenWidth / 4 * 3, 160),
+                new Vector2(screenWidth / 4 * 3 - 20, 230),
+                new Vector2(screenWidth / 4 * 3 + 20, 230), Color.DarkBlue
+            );
+
+            DrawPoly(new Vector2(screenWidth / 4 * 3, 320), 6, 80, 0, Color.Brown);
+
+            EndDrawing();
+            //----------------------------------------------------------------------------------
+        }
+
+        // De-Initialization
+        //--------------------------------------------------------------------------------------
+        CloseWindow();
 
 #!markdown
 

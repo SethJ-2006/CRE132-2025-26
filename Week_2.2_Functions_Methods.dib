@@ -93,7 +93,7 @@ Methods can also return values using the `return` keyword.
 // Example: Method that returns a value
 int Add(int a, int b)
 {
-    return a + b;
+    return a - b;
 }
 
 int sum = Add(3, 5);
@@ -141,3 +141,48 @@ Raylib.CloseWindow();
 #!csharp
 
 // Your code here 
+int Multiply(int a, int b)
+{
+    return b * a;
+}
+
+int sum = Multiply(7, 2);
+Console.WriteLine($"7 x 2 = {sum}");
+
+#!csharp
+
+//Your code here
+bool Max(int c, int d)
+{
+    return c > d;
+}
+
+int num1, num2;
+num1 = 18; num2 = 22;
+
+bool sum = Max(num1, num2);
+if (sum) Console.WriteLine(num1 + " is greater than " + num2);
+else Console.WriteLine(num1 + " is less than or equal to " + num2);
+
+#!csharp
+
+//Your code here
+using Raylib_cs;
+
+static void DrawObject(float x, float y, Color color)
+{
+    Raylib.DrawRectangle((int)x, (int)y, 450, 300, color);
+}
+
+Raylib.InitWindow(900, 840, "Raylib Method Challenge");
+Raylib.SetTargetFPS(60);
+
+while (!Raylib.WindowShouldClose())
+{
+    Raylib.BeginDrawing();
+    Raylib.ClearBackground(Color.White);
+    DrawObject(180, 210, Color.Red);
+    Raylib.EndDrawing();
+}
+
+Raylib.CloseWindow();
