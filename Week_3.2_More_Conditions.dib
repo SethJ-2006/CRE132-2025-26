@@ -77,6 +77,8 @@ string myName = "Thor";
 
 if (myName == "Thor") {
     Console.WriteLine("I am the mighty Thor!");
+} else if (myName == "Spider-Man") {
+    Console.WriteLine("It's your friendly neighbourhood Spider-Man!");
 } else {
     Console.WriteLine("I am a feeble human!");
 }
